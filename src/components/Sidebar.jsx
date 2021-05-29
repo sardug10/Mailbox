@@ -6,41 +6,36 @@ import ErrorIcon from '@material-ui/icons/Error';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EmailIcon from '@material-ui/icons/Email';
 
-const Sidebar = ({match}) => {
+const Sidebar = ({match, emails}) => {
 
     const tags = [
         {
             name:'Inbox',
             icon:InboxIcon,
-            number:54,
             active:true,
             path:'inbox'
         },
         {
             name:'Drafts',
             icon:InsertDriveFileIcon,
-            number:54,
             active:false,
             path:'draft'
         },
         {
             name:'Spam',
             icon:ErrorIcon,
-            number:54,
             active:false,
             path:'spam'
         },
         {
             name:'Trash',
             icon:DeleteIcon,
-            number:54,
             active:false,
             path:'trash'
         },
         {
             name:'All Mail',
             icon:EmailIcon,
-            number:54,
             active:false,
             path:'all'
         },
@@ -71,7 +66,7 @@ const Sidebar = ({match}) => {
         <div className='sidebar'>
             {
                 tagsArray.map((tag)=>(
-                    <SidebarTags key={tag.name} Icon={tag.icon} title={tag.name} number={tag.number} active={tag.active} path={tag.path} handleOnClick={handleTagSelect}/>
+                    <SidebarTags key={tag.name} Icon={tag.icon} title={tag.name} active={tag.active} path={tag.path} handleOnClick={handleTagSelect}/>
                 ))
             }
         </div>

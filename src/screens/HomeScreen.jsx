@@ -22,7 +22,7 @@ const HomeScreen = ({history, match}) => {
         <div>
             <Header emails={emails} />
             <div className="main">
-                <Sidebar match={match}/>
+                <Sidebar match={match} emails={emails} />
                 {loading && <CircularProgress className='loader' />}
                 {error && <Alert severity="error">Error: {error}</Alert> }
                 <Email match={match} data={emails}/>
