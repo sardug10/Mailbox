@@ -30,7 +30,15 @@ $color-black: #343434;
         font-weight: 600;
     }
 
+    &__middle{
+        height: 3rem;
+        &--secondary{
+            width: 100%;
+        }
+    }
+
     &__input{
+        position: relative;
         border: none;
         width: 100%;
         padding: 0 10px;
@@ -52,6 +60,28 @@ $color-black: #343434;
             color: $color-light-gray;
         }
     }
+
+    &__suggestions{
+        position: absolute;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        max-height: 15rem;
+        top: 8%;
+        left: 55%;
+        transform: translate(-50%);
+        width: 50%;
+        background-color:$color-light-gray;
+        z-index: 999;
+        border-radius: 5px;
+        padding: 1.2rem;
+        overflow-y: scroll;
+
+        &--hide{
+            display: none;
+        }
+    }
+
     &__left{
         display: flex;
         align-items: center;
@@ -68,6 +98,33 @@ $color-black: #343434;
 
     &__right{
         margin-right: 2.5rem;
+    }
+
+    &__link{
+        display: inline-block;
+        text-decoration: none;
+        color: $color-dark-gray;
+        padding: 5px 2.5px;
+        border-bottom: 1px solid whitesmoke;
+
+        &:hover{
+            border-top: 1px solid whitesmoke;
+            box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.24);
+        }
+    }
+
+    &__subject{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__body{
+        font-size: 12px;
+    }
+
+    &__message{
+        font-size: 14px;
+        font-weight: 500;
     }
 }
 
@@ -166,12 +223,39 @@ $color-black: #343434;
     &__subject{
         font-weight: 600;
     }
+}
 
-    // &__body{
-    //     width: 400px;
-    //     white-space: nowrap;
-    //     overflow: hidden;
-    //     text-overflow: ellipsis;
-    //     padding: 0 5px;
-    // }
+.emailDetail{
+    color: $color-dark-gray;
+    text-transform: capitalize;
+
+    &__top, &__middle{
+        margin: 10px 30px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__subject{
+        font-size: 16px;
+        margin:0 1.8rem;
+    }
+
+    &__sender{
+        margin-left: 1rem;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__bottom{
+        padding: 10px 60px;
+        font-size: 16px;
+    }
+}
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }

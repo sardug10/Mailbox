@@ -21,7 +21,7 @@ const Sidebar = ({match}) => {
             icon:InsertDriveFileIcon,
             number:54,
             active:false,
-            path:'drafts'
+            path:'draft'
         },
         {
             name:'Spam',

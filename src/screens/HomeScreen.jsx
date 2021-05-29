@@ -1,21 +1,31 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import Email from '../components/Email';
 import Header from './../components/Header';
 import Sidebar from './../components/Sidebar';
+import { listEmails } from '../features/emailActions';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Alert from '@material-ui/lab/Alert';
 
 const HomeScreen = ({history, match}) => {
 
-    // useEffect(() => {
-    //     console.log(history)
-    //     console.log(match.params.tag)        
-    // })
+    const dispatch = useDispatch()
+
+    const emailList = useSelector((state)=>state.emailList)
+    const { loading, emails, error } = emailList
+
+    useEffect(() => {
+        dispatch(listEmails())
+    },[dispatch])
 
     return (
         <div>
-            <Header/>
+            <Header emails={emails} />
             <div className="main">
                 <Sidebar match={match}/>
-                <Email match={match}/>
+                {loading && <CircularProgress className='loader' />}
+                {error && <Alert severity="error">Error: {error}</Alert> }
+                <Email match={match} data={emails}/>
             </div>
         </div>
     )
