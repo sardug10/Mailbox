@@ -148,25 +148,10 @@ $color-black: #343434;
         text-decoration: none;
     }
 
-    &__number{
-        display: none;
-        font-weight: 300;
-        font-size: 1rem;
-    }
-    
-    &__tags--active &__number{
-        display: inline-block;
-    }
-
-    &__tags:hover &__number{
-        display: inline;
-    }
     &__tags:hover,
     &__tags:hover &__text,
-    &__tags:hover &__number,
     &__tags--active,
-    &__tags--active &__text,
-    &__tags--active &__number{
+    &__tags--active &__text{
         background-color: #fcecec;
         color: #c04b37;
         font-weight: 800;

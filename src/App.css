@@ -173,25 +173,9 @@
   text-decoration: none;
 }
 
-.sidebar__number {
-  display: none;
-  font-weight: 300;
-  font-size: 1rem;
-}
-
-.sidebar__tags--active .sidebar__number {
-  display: inline-block;
-}
-
-.sidebar__tags:hover .sidebar__number {
-  display: inline;
-}
-
 .sidebar__tags:hover,
-.sidebar__tags:hover .sidebar__text,
-.sidebar__tags:hover .sidebar__number, .sidebar__tags--active,
-.sidebar__tags--active .sidebar__text,
-.sidebar__tags--active .sidebar__number {
+.sidebar__tags:hover .sidebar__text, .sidebar__tags--active,
+.sidebar__tags--active .sidebar__text {
   background-color: #fcecec;
   color: #c04b37;
   font-weight: 800;
