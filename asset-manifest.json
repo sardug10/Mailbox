@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Mailbox/static/css/main.ea8a25c8.chunk.css",
+    "main.js": "/Mailbox/static/js/main.6f3c3c33.chunk.js",
+    "main.js.map": "/Mailbox/static/js/main.6f3c3c33.chunk.js.map",
+    "runtime-main.js": "/Mailbox/static/js/runtime-main.36e5af79.js",
+    "runtime-main.js.map": "/Mailbox/static/js/runtime-main.36e5af79.js.map",
+    "static/js/2.753fb99f.chunk.js": "/Mailbox/static/js/2.753fb99f.chunk.js",
+    "static/js/2.753fb99f.chunk.js.map": "/Mailbox/static/js/2.753fb99f.chunk.js.map",
+    "index.html": "/Mailbox/index.html",
+    "static/css/main.ea8a25c8.chunk.css.map": "/Mailbox/static/css/main.ea8a25c8.chunk.css.map",
+    "static/js/2.753fb99f.chunk.js.LICENSE.txt": "/Mailbox/static/js/2.753fb99f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.36e5af79.js",
+    "static/js/2.753fb99f.chunk.js",
+    "static/css/main.ea8a25c8.chunk.css",
+    "static/js/main.6f3c3c33.chunk.js"
+  ]
+}
